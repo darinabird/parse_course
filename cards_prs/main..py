@@ -41,7 +41,7 @@ def get_data(html):
 
     for plugin in plugins:
         # [plugin1, plugin2, plugin3, plugin4]
-        # обращаемся к элементу класса 'soup'
+        # обращаюсь к элементу класса 'soup'
         name = plugin.find('h2').text
         url = plugin.find('h2').find('a').get('href')
 
@@ -54,9 +54,7 @@ def get_data(html):
         data = {'name': name,
                 'url': url,
                 'reviews': rating}
-        # print(data)
         write_csv(data)
-    # return plugins
 
 
 def main():
